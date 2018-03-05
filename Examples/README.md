@@ -36,14 +36,6 @@ This example creates ThingWorx Thing named `test_thing` with two predefined Prop
 
 ### DataSender Example setup
 
-**Note:** the hosted ThingWorx Evaluation Server is stopped after 3 hours of inactivity and typically take about one minute to start again.
-You need to ensure the Server is started before running the Example.
-To start the Server:
-1. Click **Evaluation Server** icon in the top right corner of the ThingWorx Developer Portal.
-2. Check the Server status in the pop up. If it is **Stopped**, click **Start** button.
-
-
-
 - In [Electric Imp's IDE](https://ide.electricimp.com) create new Product and Development Device Group.
 - Assign device to the newly created Device Group.
 - Copy the [DataSender source code](./DataSender.agent.nut) and paste it into the IDE as the agent code.
@@ -52,6 +44,12 @@ To start the Server:
 ![SetThingWorxConsts](../png/SetThingWorxConsts.png?raw=true)
 - Click **Build and Force Restart**.
 - Check from the logs in the IDE that data sendings are successful.
+
+**Note:** the hosted ThingWorx Evaluation Server is stopped after 3 hours of inactivity and typically take about one minute to start again.
+You need to ensure the Server is started before running the Example.
+To start the Server:
+- Click **Evaluation Server** icon in the top right corner of the ThingWorx Developer Portal.
+- Check the Server status in the pop up. If it is **Stopped**, click **Start** button.
 
 ### Check the Properties values in ThingWorx
 - In the **ThingWorx Composer** **Home** tab click **Things** in the left menu.
