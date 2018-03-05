@@ -9,14 +9,14 @@ The tests are written for and should be used with [impt](https://github.com/elec
 
 The tests for ThingWorx library require pre-setup described below.
 
-## ThingWorx Account Configuration
+## ThingWorx Evaluation Server Configuration
 
 - Login to [ThingWorx Developer Portal](https://developer.thingworx.com) in your web browser.
 - Click **Evaluation Server** icon in the top right corner of the Developer Portal.
-- Copy and save somewhere Hostname value from the pop up. This will be used as the value of the *THING_WORX_ENDPOINT* environment variable.
+- Copy and save somewhere **Hostname** value from the pop up. This will be used as the value of the *THING_WORX_ENDPOINT* environment variable.
 - Click **Launch**. You will be redirected to the ThingWorx Composer page (usually a new tab).
 ![LaunchThingWorx](../png/LaunchThingWorx.png?raw=true)
-- In the **ThingWorx Composer** **Home** tab click **Application Keys +** button in the **SECURITY** menu.
+- In the **ThingWorx Composer** **Home** tab click **Application Keys "+"** button in the **SECURITY** menu.
 ![AddAppKey](../png/AddAppKey.png?raw=true)
 - Enter any Application Key **Name**, eg. `testAppKey`.
 - Click **Search** button in **User Name Reference** field and choose **Administrator** user.
