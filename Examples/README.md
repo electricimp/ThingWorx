@@ -39,8 +39,8 @@ This example creates ThingWorx Thing named `test_thing` with two predefined Prop
 **Note:** the hosted ThingWorx Evaluation Server is stopped after 3 hours of inactivity and typically take about one minute to start again.
 You need to ensure the Server is started before running the Example.
 To start the Server:
-- Click **Evaluation Server** icon in the top right corner of the ThingWorx Developer Portal.
-- Check the Server status in the pop up. If it is **Stopped**, click **Start** button.
+1. Click **Evaluation Server** icon in the top right corner of the ThingWorx Developer Portal.
+2. Check the Server status in the pop up. If it is **Stopped**, click **Start** button.
 
 
 
