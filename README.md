@@ -17,12 +17,12 @@ This version of the library supports the following functionality:
 
 Before using the library you need to have:
 
-- An endpoint of your ThingWorx platform instance (it may look like `"https://"PP-1802281448E8.Devportal.Ptc.Io"`).
+- An endpoint of your ThingWorx platform instance (it may look like `https://PP-1802281448E8.Devportal.Ptc.Io`).
 - ThingWorx Application Key (see [here](https://developer.thingworx.com/resources/guides/thingworx-rest-api-quickstart/create-appkey)).
 
 ### Callbacks ###
 
-All requests that are made to the ThingWorx platform occur asynchronously. Every method that sends a request has an optional parameter which takes a callback function that will be executed when the operation is completed, whether successfully or not. The callbacks’ parameters are listed in the corresponding method description, but every callback has at least one parameter, *error*. If *error* is `null`, the operation has been executed successfully. Otherwise, *error* is an instance of the [ThingWorxError](#thingworxerror-class) class and contains the details of the error.
+All requests that are made to the ThingWorx platform occur asynchronously. Every method that sends a request has an optional parameter which takes a callback function that will be executed when the operation is completed, whether successfully or not. The callback's parameters are listed in the corresponding method description, but every callback has at least one parameter, *error*. If *error* is `null`, the operation has been executed successfully. Otherwise, *error* is an instance of the [ThingWorxError](#thingworxerror-class) class and contains the details of the error.
 
 ## ThingWorx Class ##
 
@@ -30,7 +30,7 @@ All requests that are made to the ThingWorx platform occur asynchronously. Every
 
 | Parameter | Data Type | Required? | Description |
 | --- | --- | --- | --- |
-| *endpoint* | String | Yes | ThingWorx platform endpoint. Must include the scheme. Example: `"https://"PP-1802281448E8.Devportal.Ptc.Io"`. |
+| *endpoint* | String | Yes | ThingWorx platform endpoint. Must include the scheme. Example: `"https://PP-1802281448E8.Devportal.Ptc.Io"`. |
 | *appKey* | String | Yes | ThingWorx Application Key. See [here](https://developer.thingworx.com/resources/guides/thingworx-rest-api-quickstart/create-appkey). |
 
 This method returns a new *ThingWorx* instance.
@@ -101,7 +101,7 @@ This method returns nothing. The result of the operation may be obtained via the
 
 ### setPropertyValue(*thingName, propertyName, propertyValue[, callback]*) ###
 
-This method set a new value of the specified Property. See [here](https://developer.thingworx.com/resources/guides/thingworx-rest-api-quickstart/use-rest-api-set-property-value).
+This method sets a new value of the specified Property. See [here](https://developer.thingworx.com/resources/guides/thingworx-rest-api-quickstart/use-rest-api-set-property-value).
 
 | Parameter | Data Type | Required? | Description |
 | --- | --- | --- | --- |

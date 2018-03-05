@@ -1,0 +1,12 @@
+{
+  "deviceGroupId": "21ef543c-1308-af23-6d8d-7a3f95235b20",
+  "timeout": 30,
+  "stopOnFail": false,
+  "allowDisconnect": false,
+  "builderCache": false,
+  "testFiles": [
+    "*.test.nut",
+    "tests/**/*.test.nut"
+  ],
+  "agentFile": "ThingWorx.agent.lib.nut"
+}
