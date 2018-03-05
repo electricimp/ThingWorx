@@ -51,9 +51,9 @@ To start the Server:
 
 ### Monitor the Properties Values in ThingWorx
 
-- In the **ThingWorx Composer** **Home** tab click **Things** in the left menu.
+- In the **ThingWorx Composer** **Home** tab click **Things** in the **MODELING** menu.
 - Click *test_thing* in the **Things** table.
 ![ThingsTable](../png/Things.png?raw=true)
-- In the **test_thing** tab click **Properties** in the **MODELING** menu.
+- In the **test_thing** tab click **Properties** in the **ENTITY INFORMATION** menu.
 - Ensure the Properties table contains **data** and **measure_time** Properties and their values are updated periodically if **Refresh Properties** button is clicked.
 ![ThingProperties](../png/ThingProperties.png?raw=true)

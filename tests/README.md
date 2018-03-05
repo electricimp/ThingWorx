@@ -36,7 +36,7 @@ To start the Server:
 
 ## Set Environment Variables
 
-- Set *THING_WORX_ENDPOINT* environment variable to the value of Evaluation Server Hostname you retrieved and saved in the previous steps, prefixed by `https://`. The value should look like `"https://PP-1802281448E8.Devportal.Ptc.Io"`.
+- Set *THING_WORX_ENDPOINT* environment variable to the value of Evaluation Server Hostname you retrieved and saved in the previous steps, prefixed by `https://`. The value should look like `https://PP-1802281448E8.Devportal.Ptc.Io`.
 - Set *THING_WORX_APPLICATION_KEY* environment variable to the value of Application Key Id you retrieved and saved in the previous steps.
 - For integration with [Travis](https://travis-ci.org) set *EI_LOGIN_KEY* environment variable to the valid impCentral login key.
 
