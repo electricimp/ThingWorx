@@ -34,6 +34,8 @@ To start the Server:
 - Click **Evaluation Server** icon in the top right corner of the ThingWorx Developer Portal.
 - Check the Server status in the pop up. If it is **Stopped**, click **Start** button.
 
+**IMPORTANT:** the hosted ThingWorx Evaluation Server is available for a new ordinary account for a limited time only (usually, for 30 days).
+
 ## Set Environment Variables
 
 - Set *THING_WORX_ENDPOINT* environment variable to the value of Evaluation Server Hostname you retrieved and saved in the previous steps, prefixed by `https://`. The value should look like `https://PP-1802281448E8.Devportal.Ptc.Io`.
@@ -43,5 +45,5 @@ To start the Server:
 ## Run Tests
 
 - See [impt Testing Guide](https://github.com/electricimp/imp-central-impt/blob/master/TestingGuide.md) for the details of how to configure and run the tests.
-- Run [impt](https://github.com/electricimp/imp-central-impt) commands from the [root directory of the lib](../). It contains a default test configuration file which should be updated by *impt* commands for your testing environment (at least the Device Group must be updated).
+- Run [impt](https://github.com/electricimp/imp-central-impt) commands from the root directory of the lib. It contains a [default test configuration file](../.impt.test) which should be updated by *impt* commands for your testing environment (at least the Device Group must be updated).
 
