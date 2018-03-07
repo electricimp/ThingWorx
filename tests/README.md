@@ -11,7 +11,7 @@ The tests for ThingWorx library require pre-setup described below.
 
 ## Configure ThingWorx Evaluation Server
 
-- Login to [ThingWorx Developer Portal](https://developer.thingworx.com) in your web browser.
+- Login to [ThingWorx Developer Portal](https://developer.thingworx.com/login) in your web browser.
 - Click **Evaluation Server** icon in the top right corner of the Developer Portal. **Note:** The initial provisioning of Evaluation Server for a new account usually takes between 3-5 minutes.
 - Copy and save somewhere **Hostname** value from the pop up. This will be used as the value of the *THING_WORX_ENDPOINT* environment variable.
 - Click **Launch**. You will be redirected to the ThingWorx Composer page (usually a new tab).
