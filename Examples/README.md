@@ -14,7 +14,7 @@ This example creates ThingWorx Thing named `test_thing` (if it does not exist al
 
 ### ThingWorx Evaluation Server Configuration
 
-- Login to [ThingWorx Developer Portal](https://developer.thingworx.com) in your web browser.
+- Login to [ThingWorx Developer Portal](https://developer.thingworx.com/login) in your web browser.
 - Click **Evaluation Server** icon in the top right corner of the Developer Portal. **Note:** The initial provisioning of Evaluation Server for a new account usually takes between 3-5 minutes.
 - Copy **Hostname** value from the pop up and paste into a plain text document or equivalent. This will be used as the value of the *THING_WORX_ENDPOINT* constant in the imp agent code.
 - Click **Launch**. You will be redirected to the ThingWorx Composer page (usually a new tab).
