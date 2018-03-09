@@ -35,7 +35,7 @@
 // Every method that sends a request has an optional parameter which takes a callback function that will be
 // executed when the operation is completed, whether successfully or not.
 // Every callback has at least one parameter, error. If error is null, the operation has been executed successfully.
-// Otherwise, error is an instance of the ThingWorxError class and contains the details of the error.
+// Otherwise, error is an instance of the ThingWorx.Error class and contains the details of the error.
 
 // ThingWorx library operation error types
 enum THING_WORX_ERROR {
@@ -100,7 +100,7 @@ class ThingWorx {
     //                               The callback signature:
     //                               callback(error), where
     //                                   error :               Error details,
-    //                                     ThingWorxError      or null if the operation succeeds.
+    //                                     ThingWorx.Error     or null if the operation succeeds.
     //
     // Returns:                      Nothing
     function createThing(thingName, thingTemplateName = null, callback = null) {
@@ -133,7 +133,7 @@ class ThingWorx {
     //                               The callback signature:
     //                               callback(error), where
     //                                   error :               Error details,
-    //                                     ThingWorxError      or null if the operation succeeds.
+    //                                     ThingWorx.Error     or null if the operation succeeds.
     //                                   exist :               true if the Thing exists;
     //                                     boolean             false if the Thing does not exist
     //                                                         or the operation fails.
@@ -161,7 +161,7 @@ class ThingWorx {
     //                               The callback signature:
     //                               callback(error), where
     //                                   error :               Error details,
-    //                                     ThingWorxError      or null if the operation succeeds.
+    //                                     ThingWorx.Error     or null if the operation succeeds.
     //
     // Returns:                      Nothing
     function deleteThing(thingName, callback = null) {
@@ -186,7 +186,7 @@ class ThingWorx {
     //                               The callback signature:
     //                               callback(error), where
     //                                   error :               Error details,
-    //                                     ThingWorxError      or null if the operation succeeds.
+    //                                     ThingWorx.Error     or null if the operation succeeds.
     //
     // Returns:                      Nothing
     function createThingProperty(thingName, propertyName, propertyType, callback = null) {
@@ -225,7 +225,7 @@ class ThingWorx {
     //                               The callback signature:
     //                               callback(error), where
     //                                   error :               Error details,
-    //                                     ThingWorxError      or null if the operation succeeds.
+    //                                     ThingWorx.Error     or null if the operation succeeds.
     //
     // Returns:                      Nothing
     function setPropertyValue(thingName, propertyName, propertyValue, callback = null) {
@@ -300,14 +300,14 @@ class ThingWorx {
             }
         }
 
-        local error = errType ? ThingWorxError(errType, errDetails, httpStatus, response.body) : null;
+        local error = errType ? ThingWorx.Error(errType, errDetails, httpStatus, response.body) : null;
         _invokeDefaultCallback(callback, error);
     }
 
     // Validates the argument is not empty. Invokes callback with THING_WORX_ERROR.LIBRARY_ERROR if the check failed.
     function _validateNonEmptyArg(arg, argName, callback, invokeCallback = null) {
         if (arg == null || typeof arg == "string" && arg.len() == 0) {
-            local error = ThingWorxError(
+            local error = ThingWorx.Error(
                 THING_WORX_ERROR.LIBRARY_ERROR,
                 format("%s: %s", THING_WORX_NON_EMPTY_ARG, argName));
             if (!invokeCallback) {
@@ -363,28 +363,28 @@ class ThingWorx {
             server.log("[ThingWorx] " + message);
         }
     }
-}
 
-// Auxiliary class, represents error returned by the library.
-class ThingWorxError {
-    // error type, one of the THING_WORX_ERROR enum values
-    type = null;
+    // Auxiliary class, represents error returned by the library.
+    Error = class {
+        // error type, one of the THING_WORX_ERROR enum values
+        type = null;
 
-    // human readable details of the error (string)
-    details = null;
+        // human readable details of the error (string)
+        details = null;
 
-    // HTTP status code (integer),
-    // null if type is THING_WORX_ERROR.LIBRARY_ERROR
-    httpStatus = null;
+        // HTTP status code (integer),
+        // null if type is THING_WORX_ERROR.LIBRARY_ERROR
+        httpStatus = null;
 
-    // Response body of the failed request (table),
-    // null if type is THING_WORX_ERROR.LIBRARY_ERROR
-    httpResponse = null;
+        // Response body of the failed request (table),
+        // null if type is THING_WORX_ERROR.LIBRARY_ERROR
+        httpResponse = null;
 
-    constructor(type, details, httpStatus = null, httpResponse = null) {
-        this.type = type;
-        this.details = details;
-        this.httpStatus = httpStatus;
-        this.httpResponse = httpResponse;
+        constructor(type, details, httpStatus = null, httpResponse = null) {
+            this.type = type;
+            this.details = details;
+            this.httpStatus = httpStatus;
+            this.httpResponse = httpResponse;
+        }
     }
 }

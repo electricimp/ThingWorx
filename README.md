@@ -22,7 +22,7 @@ Before using the library you need to have:
 
 ### Callbacks ###
 
-All requests that are made to the ThingWorx platform occur asynchronously. Every method that sends a request has an optional parameter which takes a callback function that will be executed when the operation is completed, whether successfully or not. The callback's parameters are listed in the corresponding method description, but every callback has at least one parameter, *error*. If *error* is `null`, the operation has been executed successfully. Otherwise, *error* is an instance of the [ThingWorxError](#thingworxerror-class) class and contains the details of the error.
+All requests that are made to the ThingWorx platform occur asynchronously. Every method that sends a request has an optional parameter which takes a callback function that will be executed when the operation is completed, whether successfully or not. The callback's parameters are listed in the corresponding method description, but every callback has at least one parameter, *error*. If *error* is `null`, the operation has been executed successfully. Otherwise, *error* is an instance of the [ThingWorx.Error](#thingworxerror-class) class and contains the details of the error.
 
 ## ThingWorx Class ##
 
@@ -49,7 +49,7 @@ This method returns nothing. The result of the operation may be obtained via the
 
 | Parameter | Data Type | Description |
 | --- | --- | --- |
-| *error* | [ThingWorxError](#thingworxerror-class) | Error details, or `null` if the operation succeeds. |
+| *error* | [ThingWorx.Error](#thingworxerror-class) | Error details, or `null` if the operation succeeds. |
 
 ### existThing(*thingName, callback*) ###
 
@@ -64,7 +64,7 @@ This method returns nothing. The result of the operation may be obtained via the
 
 | Parameter | Data Type | Description |
 | --- | --- | --- |
-| *error* | [ThingWorxError](#thingworxerror-class) | Error details, or `null` if the operation succeeds. |
+| *error* | [ThingWorx.Error](#thingworxerror-class) | Error details, or `null` if the operation succeeds. |
 | *exist* | Boolean | `true` if the Thing exists; `false` if the Thing does not exist or the operation fails. |
 
 ### deleteThing(*thingName[, callback]*) ###
@@ -80,7 +80,7 @@ This method returns nothing. The result of the operation may be obtained via the
 
 | Parameter | Data Type | Description |
 | --- | --- | --- |
-| *error* | [ThingWorxError](#thingworxerror-class) | Error details, or `null` if the operation succeeds. |
+| *error* | [ThingWorx.Error](#thingworxerror-class) | Error details, or `null` if the operation succeeds. |
 
 ### createThingProperty(*thingName, propertyName, propertyType[, callback]*) ###
 
@@ -97,7 +97,7 @@ This method returns nothing. The result of the operation may be obtained via the
 
 | Parameter | Data Type | Description |
 | --- | --- | --- |
-| *error* | [ThingWorxError](#thingworxerror-class) | Error details, or `null` if the operation succeeds. |
+| *error* | [ThingWorx.Error](#thingworxerror-class) | Error details, or `null` if the operation succeeds. |
 
 ### setPropertyValue(*thingName, propertyName, propertyValue[, callback]*) ###
 
@@ -114,13 +114,13 @@ This method returns nothing. The result of the operation may be obtained via the
 
 | Parameter | Data Type | Description |
 | --- | --- | --- |
-| *error* | [ThingWorxError](#thingworxerror-class) | Error details, or `null` if the operation succeeds. |
+| *error* | [ThingWorx.Error](#thingworxerror-class) | Error details, or `null` if the operation succeeds. |
 
 ### setDebug(*value*) ###
 
 This method enables (*value* is `true`) or disables (*value* is `false`) the library debug output (including error logging). It is disabled by default. The method returns nothing.
 
-## ThingWorxError Class ##
+## ThingWorx.Error Class ##
 
 This class represents an error returned by the library and has the following public properties:
 
