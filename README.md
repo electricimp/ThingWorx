@@ -103,7 +103,7 @@ This method creates a new Property of the specified Thing and restarts the Thing
 | --- | --- | --- | --- |
 | *thingName* | String | Yes | Name of the Thing |
 | *propertyName* | String | Yes | Name of the new Property. Must be unique across the specified Thing |
-| *propertyType* | String | Yes | Type of the new Property. Must be one of the types described in the ThingWorx [documentation](https://support.ptc.com/cs/help/thingworx_hc/thingworx_7.0_hc/index.jspx?id=ThingProperties&action=show) |
+| *propertyType* | String | Yes | Type of the new Property. Must be one of the types described in [the ThingWorx documentation](https://support.ptc.com/cs/help/thingworx_hc/thingworx_7.0_hc/index.jspx?id=ThingProperties&action=show) |
 | *callback* | Function | Optional | Executed once the operation is completed |
 
 This method returns nothing. The result of the operation may be obtained via the *callback* function, which has the following parameter:
@@ -120,7 +120,7 @@ This method sets a new value of the specified Property. For more information, pl
 | --- | --- | --- | --- |
 | *thingName* | String | Yes | Name of the Thing |
 | *propertyName* | String | Yes | Name of the Property |
-| *propertyValue* | Boolean, Integer, Float, String, Key-Value Table, Blob, Null | Yes | New value of the Property |
+| *propertyValue* | Boolean, Integer, Float,<br>String, Key-Value Table,<br>Blob, Null | Yes | New value of the Property |
 | *callback* | Function | Optional | Executed once the operation is completed |
 
 This method returns nothing. The result of the operation may be obtained via the *callback* function, which has the following parameter:
